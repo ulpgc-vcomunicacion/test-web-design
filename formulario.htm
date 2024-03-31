@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test ULPGCDS: formulario</title>
+
+<!-- DatePicker -->
+<link type="text/css" rel="stylesheet" href="https://cdn.ulpgc.es/ulpgcds/1.0/js/jquery.ui/datepicker.css" media="all" />
+
+<link type="text/css" rel="stylesheet" href="https://cdn.ulpgc.es/ulpgcds/1.0/css/ulpgcds.css" media="all" />
+
+</head>
+
+<body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.ulpgc.es/ulpgcds/1.0/js/ulpgcds.js?v=1.0"></script>
+
+
+<h2><span class="ulpgcds-icon-thinker"></span>Ejemplo de ...</h2>
+
+
+<h2>Ejemplos de formularios</h2>
+
+<form class="ulpgds-form">
+
+<ul class="ulpgcds-tags">
+    <li class="ulpgcds-tag"><a href="">Etiqueta 1</a></li>
+    <li class="ulpgcds-tag"><a href="">Etiqueta 2</a></li>
+    <li class="ulpgcds-tag"><a href="">Etiqueta 3</a></li>
+    <li class="ulpgcds-tag"><a href="">Etiqueta 4</a></li>
+</ul>
+
+<div class="ulpgcds-form__item">
+  <label for="text-input-id">Nombre</label>
+  <input id="text-input-id" name="text-input" placeholder="ponga aquí su nombre" required="required" type="text" />
+  <br>
+  <label for="text-input-id">Apellidos<span class="icon icon-alert"></span></label>
+  <input id="text-input-id" name="text-input" placeholder="ponga aquí sus dos apellidos" type="text" />
+
+  <fieldset class="ulpgcds-form__item">
+     <legend>Su género:</legend>
+     <div class="ulpgcds-form__item__radio">
+     <input id="option1" name="radio" type="radio" /> <label for="option1">Mujer</label> 
+     </div>
+     <div class="ulpgcds-form__item__radio">
+     <input checked="checked" id="option2" name="radio" type="radio" /><label for="option2">Hombre</label>
+     </div>
+     <div class="ulpgcds-form__item__radio">
+     <input id="option3" name="radio" type="radio" /><label for="option3">Otro</label>
+     <input id="xxx" name="radio" type="radio" /><label for="xxx">otro más</label>
+     </div>
+     <input id="yyy" name="radio" type="radio" /><label for="yyy">otro más aún</label>
+</fieldset>
+
+<fieldset class='ulpgcds-form__item'>
+     <legend>Suscripciones disponibles:</legend>
+     <div class="ulpgcds-form__item ulpgcds-form__item--checkbox">
+           <input id="gratis" name="checkbox" type="checkbox" /> <label for="gratis">boletín de política</label>
+     </div>
+     <div class="ulpgcds-form__item ulpgcds-form__item--checkbox">
+          <input checked="checked" id="premium" name="checkbox" type="checkbox" /><label for="premium">Noticias deportivas</label>
+     </div>
+</fieldset>
+
+<!-- dropdown list - desplegable --> 
+<div class="ulpgcds-form__item ulpgcds-form__item--type-select">
+  <label for="dropdown">Dropdown list - test me!</label>
+  <select id="dropdown" name="dropdown">
+      <option value="" >Choose an option</option>
+      <option value="1">Select option 1</option>
+      <option value="2">Select option 2</option>
+      <option value="3">Select option 3</option>
+  </select>
+  <div class="help-text">Help text goes here</div>
+</div> 
+
+</div>
+
+<div class="ulpgcds-form__item ulpgcds-form__item--textarea">
+     <label for="text-area-1"><button class="ulpgcds-tooltip" data-simpletooltip-text="ayuda adicional cuando pasas el ratón por encima" role="tooltip">¿Por qué le gusta la nueva web?<span class="icon icon-alert"></span></button></label>
+     <textarea id="text-area-1" name="text-area-1" placeholder="díganos algo aquí"></textarea>
+     <div class="help-text">explique por qué le gusta</div>
+
+<!-- campo numérico -->
+     <div class="ulpgcds-form__item ulpgcds-form__item--type-numeric">
+<label for="number-input">¿Cuántos años tiene?</label>
+<input id="number-input" max="100" min="3" step="1" type="number"  placeholder="ponga aquí su edad en años"/>
+</div>
+
+<!-- selector de fecha -->
+
+
+      <div class="ulpgcds-form__item">
+            <label for="fecha-datepicker-2">Fecha de nacimiento</label> 
+            <input autocomplete="off" class="ulpgcds-datepicker ulpgcds-form__item--icon" id="fecha-datepicker-2" name="fecha" type="text" value="" placeholder="dd/mm/aaaa" />
+            <span class="ulpgcds-icon-calendar"></span>
+        </div>
+
+    <!-- opción deshabilitada -->
+
+     <label for="text-area-2">deshabilitada</label>
+     <textarea id="text-area-2" name="text-area-2" placeholder="no se puede escribir aquí" disabled="disabled" class="form-item__error"></textarea>  
+
+
+</div>
+
+<!-- botones -->
+<button class="ulpgcds-btn ulpgcds-btn--primary">Escrincar</button>
+<button class="ulpgcds-btn ulpgcds-btn--primary"><i class="ulpgcds-btn__icon--left icon-thinker"></i>Cancelar</button>
+
+<div>
+Botón con icono: <button class="ulpgcds-btn ulpgcds-btn--icon" ><i class="ulpgcds-btn__icon icon-campus"></i><span>Campus</span></button>
+</div>
+
+<h3>Selector múltiple</h3>
+
+<div class="ulpgcds-form__item ulpgcds-form__item--type-select">
+  <label for="dropdown">etiqueta del selector múltiple</label>
+  <select id="dropdown" name="dropdown" class="chosen" multiple="multiple">
+      <option value="1">Select option 1</option>
+      <option value="2">Select option 2</option>
+      <option value="3">Select option 3</option>
+  </select>
+  <div class="help-text">Help text goes here</div>
+</div>
+
+
+<!-- fin del formulario -->  
+</form>
+
+
+<br>
+<br>Se acabó el formulario
+
+<!-- DatePicker -->
+<script type="text/javascript" src="https://cdn.ulpgc.es/ulpgcds/1.0/js/jquery.ui/datepicker.js"></script>
+
+</body>
+</html>

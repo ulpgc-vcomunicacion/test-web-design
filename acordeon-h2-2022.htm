@@ -1,0 +1,50 @@
+<html>
+<head>
+
+<link type="text/css" rel="stylesheet" href="https://cdn.ulpgc.es/ulpgcds/1.0/css/ulpgcds.css" media="all" />
+</head>
+
+<body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.ulpgc.es/ulpgcds/1.0/js/ulpgcds.js?v=1.0"></script>
+
+<h1>Ejemplo con acordeón con H2</h1>
+
+<div class="ulpgcds-accordion">
+
+<h2>1. Información personal</h2>
+<h3>Subsección A</h3>
+<p>Ejemplo del contenido asociado a un elemento acordeón en su primera opción.</p>
+<h3>Subsección B</h3>
+<p>Ejemplo del contenido asociado a un elemento acordeón en su primera opción.</p>
+
+
+<h2>2. Temario</h2>
+<p>Ejemplo del contenido asociado a un elemento acordeón en su segunda opción.</p>
+
+<h2>3. Información personal</h2>
+
+<h3>Otra subsección</h3>
+<p>Ejemplo del contenido asociado a un elemento acordeón en su tercera y última opción.</p>
+
+</div>
+
+<h1>Muestra con H3 (no visible)</h1>
+<p>
+El componente rastrea toda la página y detecta cuál es la etiqueta de más jerarquía declarada como acordeón. Si detecta que es un H2, ignorará los acordeones que hayan sido declarados como H3. Es el caso que se muestra a continuación: se aplica la clase "ulpgcds-accordion" a un H3, pero no se visualiza como acordeón.
+</p>
+
+<div class="ulpgcds-accordion">
+<h3>1. Información personal</h3>
+<p>Ejemplo del contenido asociado a un elemento acordeón en su primera opción.</p>
+
+<h3>2. Temario</h3>
+<p>Ejemplo del contenido asociado a un elemento acordeón en su segunda opción.</p>
+
+<h3>3. Información personal</h3>
+<p>Ejemplo del contenido asociado a un elemento acordeón en su tercera y última opción.</p>
+
+</div> 
+
+</body>
+</html>
